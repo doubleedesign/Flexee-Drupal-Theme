@@ -2,9 +2,9 @@ global:
   version: VERSION
   css:
     theme:
-      style.css: {}
+      dist/style.css: {}
   js:
-    js/build/scripts.js: {}
+    dist/theme.js: {}
     dependencies:
       - core/drupal
       - core/jquery
