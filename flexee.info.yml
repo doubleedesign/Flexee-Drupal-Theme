@@ -1,0 +1,22 @@
+name: flexee
+type: theme
+description: Starter theme using a 12-column, flexbox-based grid system and starter styles.
+package: Core
+version: 0.1
+core: 8.x
+base theme: classy
+
+libraries:
+  - core/normalize
+  - flexee/global
+
+regions:
+  header: Header
+  navbar: Navbar
+  banner: Banner
+  breadcrumb: Breadcrumbs
+  help: Help
+  highlighted: 'Highlighted area'
+  content: Content
+  sidebar: Sidebar
+  footer: Footer

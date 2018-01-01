@@ -1,0 +1,51 @@
+/*!
+Theme Name: Flexee
+Author: Leesa Ward
+Author URI: http://www.doubleedesign.com.au
+Description: Drupal 8 starter theme with a simple flexbox-based grid system and starter styles
+Version: 0.1
+*/
+
+// FontAwesome icons 
+@import "vendor/font-awesome";
+
+/* Functions */
+@import "core/functions";
+
+/* Site variables */
+@import "variables";
+
+/* Core: Things that generally don't change */
+@import "core/mixins";
+@import "core/normalize"; 
+@import "core/grid";
+@import "core/accessibility"; 
+@import "core/utilities"; 
+
+// Third-party libraries 
+@import "vendor/animate/animate";
+@import "vendor/hover/hover";
+
+/* Typography */
+@import "typography/typescales";
+@import "typography/typography";
+
+/* Standard components */
+@import "components/asides";
+@import "components/buttons";
+@import "components/forms";
+@import "components/media";
+@import "components/messages";
+@import "components/pagination";
+@import "components/tables";
+
+/* Main layout sections */
+@import "layout/global";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/sidebar";
+@import "layout/footer";
+
+/* Templates */
+@import "templates/page";
+@import "templates/homepage";

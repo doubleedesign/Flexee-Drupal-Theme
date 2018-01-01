@@ -1,0 +1,92 @@
+/*=========================================
+	COLOUR SCHEME
+=========================================*/
+$primary-color:  		#7e3f98;
+$secondary-color:		#222;
+$accent-color:			darken(#F00,10%);
+$body-color:			#555;
+
+$success-color: 		#3adb76;
+$warning-color: 		#ffae00;
+$info-color: 			#bde5f8;
+$error-color: 			#ec5840;
+
+$link-color:			darken($body-color, 10%);
+$link-hover-color:		$primary-color;
+
+/*=========================================
+	GRID
+=========================================*/
+$gutter:     			1rem;
+$column-count: 			12;
+
+// Breakpoints
+$smaller: 				em-calc(480);
+$small:       			em-calc(600);
+$medium: 				em-calc(768);
+$tablet:        		em-calc(960);
+$large:        			em-calc(1280);
+$xlarge: 				em-calc(1600);
+$xxlarge: 				em-calc(1920);
+
+// Spacing
+$global-padding: 		$gutter;
+$global-margin: 		$gutter;
+
+$grid-column-gutter: (
+	default: 			$gutter,
+	smaller: 			$gutter,
+	small: 				$gutter,
+	medium: 			$gutter*1.5,
+	tablet: 			$gutter*2,
+	large: 				$gutter*2,
+	xlarge: 			$gutter*2.5,
+	xxlarge:			$gutter*3
+);
+
+// Boundaries
+$start: 				em-calc(320);
+$boundary: 				em-calc(2250);
+$row-width: 			em-calc(1280); 	/* The maximum width of each row. Note that $font-size-large-screen makes 
+										this bigger than 1280 if that value is larger than 16px.
+										$row-width may be different to $boundary, which is for the whole site.
+										If you want to use the xlarge and xxlarge breakpoints for the layout,
+										set this to the same or larger than the largest breakpoint you want to use.
+										*/
+
+/*=========================================
+	TYPOGRAPHY
+=========================================*/
+$heading-font: 				'Roboto Condensed', Arial, sans-serif; 
+$heading-text-transform:	none;
+$subheading-font:			$heading-font;
+$body-font: 				'Roboto Condensed', Arial, sans-serif;
+$font-size-normal:			em-calc(16);
+$font-size-large-screen: 	em-calc(18);
+$font-size-small:			em-calc(14);
+$font-weight-light:			300;
+$font-weight-normal:		400;
+$font-weight-bold:			700;
+$line-height-normal:		1.45;
+$heading-font-weight:		$font-weight-light;
+
+/*=========================================
+	NAVIGATION
+=========================================*/
+$menu-font: 				$heading-font;
+$menu-text-transform: 		none;
+$menu-link-color:			#FFF;
+$menu-hover-color:			$menu-link-color;
+$menu-background:			darken($primary-color,10);
+$menu-hover-background: 	darken($menu-background,5%);
+
+$dropdown-font: 			$menu-font;
+$dropdown-color:			#ffffff;
+$dropdown-hover-color:		$dropdown-color;
+$dropdown-background:		$menu-hover-background;
+$dropdown-hover-background:	darken($dropdown-background,5%);
+
+/*=========================================
+	MISC
+=========================================*/
+$transition:					0.3s ease;

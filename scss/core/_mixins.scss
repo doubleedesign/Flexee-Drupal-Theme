@@ -1,0 +1,213 @@
+// See core/_grid.scss for breakpoint mixins
+// See typography/_typescales.scss for type scale mixins for typography
+
+/*==============================================
+	ICON MIXIN
+==============================================*/
+@mixin icon($icon) {
+	font-family: "FontAwesome";
+	content: $icon;
+}
+
+/*=========================================
+	BREAKPOINT MIXINS
+=========================================*/					
+@mixin bp-smaller {
+  @media only screen and (min-width: $smaller) {
+    @content;
+  }
+}					
+@mixin bp-small {
+  @media only screen and (min-width: $small) {
+    @content;
+  }
+}
+@mixin bp-medium {
+  @media only screen and (min-width: $medium) {
+    @content;
+  }
+}
+@mixin bp-tablet {
+  @media only screen and (min-width: $tablet) {
+    @content;
+  }
+}
+@mixin bp-large {
+  @media only screen and (min-width: $large) {
+    @content;
+  }
+}
+@mixin bp-xlarge {
+  @media only screen and (min-width: $xlarge) {
+    @content;
+  }
+}
+@mixin bp-xxlarge {
+  @media only screen and (min-width: $xxlarge) {
+    @content;
+  }
+}
+
+/*==============================================
+	GUTTER PADDING ON TOP AND BOTTOM
+	Uses the $grid-column-gutter map 
+	to set responsive top and bottom padding on an element
+==============================================*/
+@mixin grid-gutter-padding-top-bottom {
+	  padding-top: map-get($grid-column-gutter,'default'); 
+	  padding-bottom: map-get($grid-column-gutter,'default'); 
+
+	  @include bp-smaller {
+			padding-top: map-get($grid-column-gutter,'smaller'); 
+			padding-bottom: map-get($grid-column-gutter,'smaller'); 
+	  }
+
+	  @include bp-small {
+			padding-top: map-get($grid-column-gutter,'small'); 
+			padding-bottom: map-get($grid-column-gutter,'small'); 
+	  }
+
+	  @include bp-medium {
+			padding-top: map-get($grid-column-gutter,'medium'); 
+			padding-bottom: map-get($grid-column-gutter,'medium'); 
+	  } 
+
+	  @include bp-tablet {
+			padding-top: map-get($grid-column-gutter,'tablet'); 
+			padding-bottom: map-get($grid-column-gutter,'tablet'); 
+	  }
+
+	  @include bp-large {
+			padding-top: map-get($grid-column-gutter,'large'); 
+			padding-bottom: map-get($grid-column-gutter,'large'); 
+	  }
+
+	  @include bp-xlarge {
+			padding-top: map-get($grid-column-gutter,'xlarge'); 
+			padding-bottom: map-get($grid-column-gutter,'xlarge'); 
+	  }
+
+	  @include bp-xxlarge {
+			padding-top: map-get($grid-column-gutter,'xxlarge'); 
+			padding-bottom: map-get($grid-column-gutter,'xxlarge'); 
+	  }
+}
+
+/*==============================================
+	GUTTER PADDING ON TOP AND BOTTOM - SPECIFY AMOUNT
+	Uses the $grid-column-gutter map - multipled by the number given
+	to set responsive top and bottom padding on an element
+==============================================*/
+@mixin grid-gutter-padding-top-bottom-specify($howmuch) {
+	  padding-top: map-get($grid-column-gutter,'default')*$howmuch; 
+	  padding-bottom: map-get($grid-column-gutter,'default')*$howmuch; 
+	  
+	  @include bp-smaller {
+			padding-top: map-get($grid-column-gutter,'smaller')*$howmuch; 
+			padding-bottom: map-get($grid-column-gutter,'smaller')*$howmuch; 
+	  }
+
+	  @include bp-small {
+			padding-top: map-get($grid-column-gutter,'small')*$howmuch; 
+			padding-bottom: map-get($grid-column-gutter,'small')*$howmuch; 
+	  }
+
+	  @include bp-medium {
+			padding-top: map-get($grid-column-gutter,'medium')*$howmuch; 
+			padding-bottom: map-get($grid-column-gutter,'medium')*$howmuch; 
+	  } 
+
+	  @include bp-tablet {
+			padding-top: map-get($grid-column-gutter,'tablet')*$howmuch; 
+			padding-bottom: map-get($grid-column-gutter,'tablet')*$howmuch; 
+	  }
+
+	  @include bp-large {
+			padding-top: map-get($grid-column-gutter,'large')*$howmuch; 
+			padding-bottom: map-get($grid-column-gutter,'large')*$howmuch; 
+	  }
+
+	  @include bp-xlarge {
+			padding-top: map-get($grid-column-gutter,'xlarge')*$howmuch; 
+			padding-bottom: map-get($grid-column-gutter,'xlarge')*$howmuch; 
+	  }
+
+	  @include bp-xxlarge {
+			padding-top: map-get($grid-column-gutter,'xxlarge')*$howmuch; 
+			padding-bottom: map-get($grid-column-gutter,'xxlarge')*$howmuch; 
+	  }
+}
+
+/*==============================================
+	GUTTER MARGIN BOTTOM
+	Uses the $grid-column-gutter map 
+	to set a responsive bottom margin on an element
+==============================================*/
+@mixin grid-gutter-margin-bottom {
+	  margin-bottom: map-get($grid-column-gutter,'default'); 
+
+	  @include bp-smaller {
+			margin-bottom: map-get($grid-column-gutter,'smaller'); 
+	  }
+
+	  @include bp-small {
+			margin-bottom: map-get($grid-column-gutter,'small'); 
+	  }
+
+	  @include bp-medium {
+			margin-bottom: map-get($grid-column-gutter,'medium'); 
+	  } 
+
+	  @include bp-tablet {
+			margin-bottom: map-get($grid-column-gutter,'tablet'); 
+	  }
+
+	  @include bp-large {
+			margin-bottom: map-get($grid-column-gutter,'large'); 
+	  }
+
+	  @include bp-xlarge {
+			margin-bottom: map-get($grid-column-gutter,'xlarge'); 
+	  }
+
+	  @include bp-xxlarge {
+			margin-bottom: map-get($grid-column-gutter,'xxlarge'); 
+	  }
+}
+
+/*==============================================
+	GUTTER MARGIN TOP
+	Uses the $grid-column-gutter map 
+	to set a responsive top margin on an element
+==============================================*/
+@mixin grid-gutter-margin-top {
+	  margin-top: map-get($grid-column-gutter,'default'); 
+
+	  @include bp-smaller {
+			margin-top: map-get($grid-column-gutter,'smaller'); 
+	  }
+
+	  @include bp-small {
+			margin-top: map-get($grid-column-gutter,'small'); 
+	  }
+
+	  @include bp-medium {
+			margin-top: map-get($grid-column-gutter,'medium'); 
+	  } 
+
+	  @include bp-tablet {
+			margin-top: map-get($grid-column-gutter,'tablet'); 
+	  }
+
+	  @include bp-large {
+			margin-top: map-get($grid-column-gutter,'large'); 
+	  }
+
+	  @include bp-xlarge {
+			margin-top: map-get($grid-column-gutter,'xlarge'); 
+	  }
+
+	  @include bp-xxlarge {
+			margin-top: map-get($grid-column-gutter,'xxlarge'); 
+	  }
+}
