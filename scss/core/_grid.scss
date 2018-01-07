@@ -74,15 +74,15 @@ wrapping onto a new line if there's more*/
 
 $half: 		100%/2;
 $third:		100%/3;
-$quarter:		100%/4;
-$fifth: 		100%/5;
-$sixth: 		100%/6;
-$seventh: 		100%/7;
-$eighth: 		100%/8;
-$ninth: 		100%/9;
-$tenth: 		100%/10;
-$eleventh: 		100%/11;
-$twelfth: 		100%/12;
+$quarter:	100%/4;
+$fifth: 	100%/5;
+$sixth: 	100%/6;
+$seventh: 	100%/7;
+$eighth: 	100%/8;
+$ninth: 	100%/9;
+$tenth: 	100%/10;
+$eleventh: 	100%/11;
+$twelfth: 	100%/12;
 // If your $column-count is larger than 12, add more variables here accordingly. 
 // You will also need to add more row classes below. 
 
@@ -324,17 +324,19 @@ Can be the messiest depending on how uniform your content is.*/
 
 /*=========================================
 	GRID MIXINS
+	TODO: Simplify this into columns($number)
 =========================================*/
 
-@mixin one-column 	{ flex-basis: $columns-1; max-width: $columns-1; }
-@mixin two-columns 	{ flex-basis: $columns-2; max-width: $columns-2; }
+@mixin one-column 		{ flex-basis: $columns-1; max-width: $columns-1; }
+@mixin two-columns 		{ flex-basis: $columns-2; max-width: $columns-2; }
 @mixin three-columns 	{ flex-basis: $columns-3; max-width: $columns-3; }
 @mixin four-columns 	{ flex-basis: $columns-4; max-width: $columns-4; }
 @mixin fifth-columns 	{ flex-basis: $columns-5; max-width: $columns-5; }
-@mixin six-columns 	{ flex-basis: $columns-6; max-width: $columns-6; }
+@mixin six-columns 		{ flex-basis: $columns-6; max-width: $columns-6; }
 @mixin seven-columns  	{ flex-basis: $columns-7; max-width: $columns-7; }
 @mixin eight-columns  	{ flex-basis: $columns-8; max-width: $columns-8; }
 @mixin nine-columns  	{ flex-basis: $columns-9; max-width: $columns-9; }
 @mixin ten-columns  	{ flex-basis: $columns-10; max-width: $columns-10; }
 @mixin eleven-columns  	{ flex-basis: $columns-11; max-width: $columns-11; }
 @mixin twelve-columns  	{ flex-basis: $columns-12; max-width: $columns-12; }
+

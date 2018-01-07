@@ -3249,6 +3249,7 @@ Can be the messiest depending on how uniform your content is.*/
 
 /*=========================================
 	GRID MIXINS
+	TODO: Simplify this into columns($number)
 =========================================*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
