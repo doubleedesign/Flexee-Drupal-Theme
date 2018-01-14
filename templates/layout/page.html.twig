@@ -44,44 +44,39 @@
 #}
 <div class="layout-container">
 
-  <header role="banner">
-    {{ page.header }}
-  </header>
+	<header role="banner">
+		{{ page.header }}
+		{{ page.navbar }}
+	</header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+	{{ page.banner }}
 
-  {{ page.breadcrumb }}
+	{{ page.breadcrumb }}
 
-  {{ page.highlighted }}
+	{{ page.highlighted }}
 
-  {{ page.help }}
+	{{ page.help }}
 
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+	<main role="main">
 
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
+		<a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
+		<div class="layout-content">
+			{{ page.content }}
+		</div>{# /.layout-content #}
 
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
+		{% if page.sidebar %}
+			<aside id="sidebar" role="complementary">
+				{{ page.sidebar }}
+			</aside>
+		{% endif %}
 
-  </main>
+	</main>
 
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
+	{% if page.footer %}
+		<footer role="contentinfo">
+			{{ page.footer }}
+		</footer>
+	{% endif %}
 
 </div>{# /.layout-container #}
