@@ -11,7 +11,8 @@ libraries:
   - flexee/global
 
 regions:
-  header: Header
+  topbar: Top Bar
+  logo: Logo
   navbar: Navbar
   banner: Banner
   breadcrumb: Breadcrumbs

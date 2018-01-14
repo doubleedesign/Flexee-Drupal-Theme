@@ -44,38 +44,70 @@
 #}
 <div class="layout-container">
 
+	<div id="topbar">
+		<div class="row">
+			{{ page.topbar }}
+		</div>
+	</div>
+
 	<header role="banner">
-		{{ page.header }}
-		{{ page.navbar }}
+		<div class="row">
+			<div class="start-12 tablet-4 columns">
+				{{ page.logo }}
+			</div>
+			<div class="start-12 tablet-8 columns">
+				{{ page.navbar }}
+			</div>
+		</div>
 	</header>
 
-	{{ page.banner }}
+	<section id="banner">
+		{{ page.banner }}
+	</section>
 
-	{{ page.breadcrumb }}
+	<section id="breadcrumbs">
+		<div class="row">
+			<div class="start-12 columns">
+				{{ page.breadcrumb }}
+			</div>
+		</div>
+	</section>
 
-	{{ page.highlighted }}
+	<section id="messages">
+		<div class="row">
+			<div class="start-12 columns">
+				{{ page.highlighted }}
+				{{ page.help }}
+			</div>
+		</div>
+	</section>
 
-	{{ page.help }}
-
-	<main role="main">
+	<section id="content">
 
 		<a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-		<div class="layout-content">
-			{{ page.content }}
-		</div>{# /.layout-content #}
+		{% if page.sidebar %}
+			<main id="layout-content" class="start-12 tablet-8 columns">
+				{{ page.content }}
+		{% else %}
+			<main id="layout-content" class="start-12 columns">
+				{{ page.content }}
+		{% endif %}
+			</main>
 
 		{% if page.sidebar %}
-			<aside id="sidebar" role="complementary">
+			<aside id="sidebar" class="start-12 tablet-4 columns" role="complementary">
 				{{ page.sidebar }}
 			</aside>
 		{% endif %}
 
-	</main>
+	</section>
 
 	{% if page.footer %}
-		<footer role="contentinfo">
-			{{ page.footer }}
+		<footer id="page-footer" role="contentinfo">
+			<div class="row">
+				{{ page.footer }}
+			</div>
 		</footer>
 	{% endif %}
 
