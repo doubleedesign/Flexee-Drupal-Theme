@@ -4368,6 +4368,7 @@ Notes:
 - H1s are two steps up from H2s to make them stand out more
 - Paragraph margins don't change according to type scale used so they are set once in _typography.scss
 - The base font size can be changed at different breakpoints and the type will scale accordingly since it's set in ems.
+- Breakpoint mixins and/or media queries can be used to change the typescale at different viewports
 ==============================================*/
 /*=========================================
 	GENERAL
