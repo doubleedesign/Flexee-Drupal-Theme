@@ -6,7 +6,10 @@ Description: Drupal 8 starter theme with a simple flexbox-based grid system and 
 Version: 0.1
 */
 
-// FontAwesome icons 
+/* Font imports */
+@import url('//fonts.googleapis.com/css?family=Quicksand:400,700|Source+Serif+Pro:400,700');
+
+/* FontAwesome icons */
 @import "vendor/font-awesome";
 
 /* Functions */
