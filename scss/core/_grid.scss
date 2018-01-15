@@ -27,9 +27,43 @@ body {
 }
 
 [class*="row"]{
-  box-sizing: border-box;
-  display: flex;
-  flex-flow: row wrap;
+	box-sizing: border-box;
+	display: flex;
+	flex-flow: row wrap;
+
+	// Vertical alignment
+	&.align-top {
+		align-items: flex-start;
+	}
+
+	&.align-middle {
+		align-items: center;
+	}
+
+	&.align-bottom {
+		align-items: flex-end;
+	}
+
+	// Horizontal alignment
+	&.justify-left {
+		justify-content: flex-start;
+	}
+
+	&.justify-center {
+		justify-content: center;
+	}
+
+	&.justify-right {
+		justify-content: flex-end;
+	}
+
+	&.justify-around {
+		justify-content: space-around;
+	}
+
+	&.justify-edges {
+		justify-content: space-between;
+	}
 }
 
 .column,
