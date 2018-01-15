@@ -57,10 +57,10 @@ $row-width: 			em-calc(1280); 	/* The maximum width of each row. Note that $font
 /*=========================================
 	TYPOGRAPHY
 =========================================*/
-$heading-font: 				'Roboto Condensed', Arial, sans-serif; 
+$heading-font: 				"Quicksand", Arial, sans-serif;
 $heading-text-transform:	none;
 $subheading-font:			$heading-font;
-$body-font: 				'Roboto Condensed', Arial, sans-serif;
+$body-font: 				"Source Serif Pro", Georgia, serif;
 $font-size-normal:			em-calc(16);
 $font-size-large-screen: 	em-calc(18);
 $font-size-small:			em-calc(14);
@@ -89,4 +89,4 @@ $dropdown-hover-background:	darken($dropdown-background,5%);
 /*=========================================
 	MISC
 =========================================*/
-$transition:					0.3s ease;
+$transition:				0.3s ease;
