@@ -1,6 +1,8 @@
 /*=========================================
 	GENERAL
 =========================================*/
+@include typescale($major-third);
+
 body, html {
 	height: 100%;
 }
@@ -60,20 +62,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight:$heading-font-weight;
 	text-transform:$heading-text-transform;
 	clear: both;
-}
-
-@include typescale-major-second;
-
-@include bp-medium {
-	@include typescale-minor-third;
-}
-
-@include bp-tablet {
-	@include typescale-major-third;
-}
-
-@include bp-xlarge {
-	@include typescale-perfect-fourth;
 }
 
 /*=========================================
