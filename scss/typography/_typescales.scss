@@ -9,14 +9,14 @@ Notes:
 ==============================================*/
 
 // Scales
-$minor-second:		1.067;
-$major-second:		1.125;
-$minor-third:		1.200;
-$major-third:		1.250;
-$perfect-fourth:	1.333;
-$augmented-fourth:  1.414;
-$perfect-fifth:		1.500;
-$golden-ratio:		1.618;
+$minor-second:			1.067;
+$major-second:			1.125;
+$minor-third:			1.200;
+$major-third:			1.250;
+$perfect-fourth:		1.333;
+$augmented-fourth:		1.414;
+$perfect-fifth:			1.500;
+$golden-ratio:			1.618;
 
 // Mixin
 @mixin typescale($this_typescale) {
