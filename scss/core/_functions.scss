@@ -1,15 +1,56 @@
-/* Pixels to ems - thanks https://css-tricks.com/snippets/sass/px-to-em-functions/ */
+/*============================================================
+	Pixels to ems
+	Source: https://css-tricks.com/snippets/sass/px-to-em-functions/
+	Usage example:
+		width: em-calc(1280);
+============================================================*/
 $browser-context: 16; // Default
 @function em-calc($pixels, $context: $browser-context) {
   @return #{$pixels/$context}em;
 }
 
-/* Map deep get
- @author Hugo Giraudel
- @param {Map} $map - Map
- @param {Arglist} $keys - Key chain
- @return {*} - Desired value
- */
+/*============================================================
+	Pixels to rems
+	Source: https://github.com/zurb/foundation-sites/releases/tag/v6.4.3
+	Usage example:
+		width: rem-calc(1280);
+		font-size: rem-calc(18);
+============================================================*/
+@function rem-calc($values, $base: null) {
+	$rem-values: ();
+	$count: length($values);
+
+	// If no base is defined, defer to the global font size
+	@if $base == null {
+		$base: 16px;
+	}
+
+	// If the base font size is a %, then multiply it by 16px
+	// This is because 100% font size = 16px in most all browsers
+	@if unit($base) == '%' {
+		$base: ($base / 100%) * 16px;
+	}
+
+	// Using rem as base allows correct scaling
+	@if unit($base) == 'rem' {
+		$base: strip-unit($base) * 16px;
+	}
+
+	@if $count == 1 {
+		@return -zf-to-rem($values, $base);
+	}
+
+	@for $i from 1 through $count {
+		$rem-values: append($rem-values, -zf-to-rem(nth($values, $i), $base));
+	}
+
+	@return $rem-values;
+}
+
+/*============================================================
+	Map-deep-get
+	Source: Hugo Giraudel
+============================================================*/
 @function map-deep-get($map, $keys...) {
     @each $key in $keys {
         $map: map-get($map, $key);

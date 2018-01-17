@@ -2219,13 +2219,23 @@ Version: 0.1
   clip: auto; }
 
 /* Functions */
-/* Pixels to ems - thanks https://css-tricks.com/snippets/sass/px-to-em-functions/ */
-/* Map deep get
- @author Hugo Giraudel
- @param {Map} $map - Map
- @param {Arglist} $keys - Key chain
- @return {*} - Desired value
- */
+/*============================================================
+	Pixels to ems
+	Source: https://css-tricks.com/snippets/sass/px-to-em-functions/
+	Usage example:
+		width: em-calc(1280);
+============================================================*/
+/*============================================================
+	Pixels to rems
+	Source: https://github.com/zurb/foundation-sites/releases/tag/v6.4.3
+	Usage example:
+		width: rem-calc(1280);
+		font-size: rem-calc(18);
+============================================================*/
+/*============================================================
+	Map-deep-get
+	Source: Hugo Giraudel
+============================================================*/
 /* Site variables */
 /*=========================================
 	COLOUR SCHEME
@@ -2525,12 +2535,12 @@ body {
   flex: 0 auto;
   padding-left: 0.25rem;
   padding-right: 0.25rem; }
-  @media only screen and (min-width: 60em) {
+  @media only screen and (min-width: -zf-to-rem(960, 16px)) {
     .column,
     .columns {
       padding-left: 0.5rem;
       padding-right: 0.5rem; } }
-  @media only screen and (min-width: 100em) {
+  @media only screen and (min-width: -zf-to-rem(1600, 16px)) {
     .column,
     .columns {
       padding-left: 1rem;
@@ -2611,7 +2621,7 @@ wrapping onto a new line if there's more*/
   flex-basis: 8.33333%;
   max-width: 8.33333%; }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: -zf-to-rem(600, 16px)) {
   .small-row-of-1 .column {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2661,7 +2671,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 8.33333%;
     max-width: 8.33333%; } }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: -zf-to-rem(768, 16px)) {
   .medium-row-of-1 .column {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2711,7 +2721,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 8.33333%;
     max-width: 8.33333%; } }
 
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: -zf-to-rem(960, 16px)) {
   .tablet-row-of-1 .column {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2761,7 +2771,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 8.33333%;
     max-width: 8.33333%; } }
 
-@media only screen and (min-width: 80em) {
+@media only screen and (min-width: -zf-to-rem(1280, 16px)) {
   .large-row-of-1 .column {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2811,7 +2821,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 8.33333%;
     max-width: 8.33333%; } }
 
-@media only screen and (min-width: 100em) {
+@media only screen and (min-width: -zf-to-rem(1600, 16px)) {
   .xlarge-row-of-1 .column {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2861,7 +2871,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 8.33333%;
     max-width: 8.33333%; } }
 
-@media only screen and (min-width: 120em) {
+@media only screen and (min-width: -zf-to-rem(1920, 16px)) {
   .xxlarge-row-of-1 .column {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2973,7 +2983,7 @@ wrapping onto a new line if there's more*/
   flex-basis: 100%;
   max-width: 100%; }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: -zf-to-rem(600, 16px)) {
   .row .columns.small-1 {
     -ms-flex-preferred-size: 8.33333%;
     flex-basis: 8.33333%;
@@ -3023,7 +3033,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 100%;
     max-width: 100%; } }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: -zf-to-rem(768, 16px)) {
   .row .columns.medium-1 {
     -ms-flex-preferred-size: 8.33333%;
     flex-basis: 8.33333%;
@@ -3073,7 +3083,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 100%;
     max-width: 100%; } }
 
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: -zf-to-rem(960, 16px)) {
   .row .columns.tablet-1 {
     -ms-flex-preferred-size: 8.33333%;
     flex-basis: 8.33333%;
@@ -3123,7 +3133,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 100%;
     max-width: 100%; } }
 
-@media only screen and (min-width: 80em) {
+@media only screen and (min-width: -zf-to-rem(1280, 16px)) {
   .row .columns.large-1 {
     -ms-flex-preferred-size: 8.33333%;
     flex-basis: 8.33333%;
@@ -3173,7 +3183,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 100%;
     max-width: 100%; } }
 
-@media only screen and (min-width: 100em) {
+@media only screen and (min-width: -zf-to-rem(1600, 16px)) {
   .row .columns.xlarge-1 {
     -ms-flex-preferred-size: 8.33333%;
     flex-basis: 8.33333%;
@@ -3223,7 +3233,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 100%;
     max-width: 100%; } }
 
-@media only screen and (min-width: 120em) {
+@media only screen and (min-width: -zf-to-rem(1920, 16px)) {
   .row .columns.xxlarge-1 {
     -ms-flex-preferred-size: 8.33333%;
     flex-basis: 8.33333%;
@@ -4373,52 +4383,65 @@ Notes:
 /*=========================================
 	GENERAL
 =========================================*/
-h1, h2, h3, h4, h5, h6, p, ul {
-  margin-bottom: 1rem; }
-
-h1, h2, h3, h4 {
-  margin-top: 1.25em;
-  font-weight: inherit;
-  line-height: 1.2; }
-  h1:first-child, h2:first-child, h3:first-child, h4:first-child {
-    margin-top: 0; }
-
-h1 {
-  margin-top: 0; }
-
-h1 {
-  font-size: 2.44141em; }
-
-h2 {
-  font-size: 1.95313em; }
-
-h3 {
-  font-size: 1.5625em; }
-
-h4 {
-  font-size: 1.25em; }
-
-h1.step-up {
-  font-size: 3.05176em; }
-
-h2.step-up {
-  font-size: 2.44141em; }
-
-h3.step-up {
-  font-size: 1.95313em; }
-
-h4.step-up {
-  font-size: 1.5625em; }
-
 body, html {
   height: 100%; }
 
 body {
   font-size: 1em;
   line-height: 1.45; }
-  @media only screen and (min-width: 100em) {
+  body h1, body h2, body h3, body h4, body h5, body h6, body p, body ul {
+    margin-bottom: 1rem; }
+  body h1, body h2, body h3, body h4 {
+    margin-top: 1.125em;
+    line-height: 1.2; }
+    body h1:first-child, body h2:first-child, body h3:first-child, body h4:first-child {
+      margin-top: 0; }
+  body h1 {
+    margin-top: 0; }
+  body h1 {
+    font-size: 1.60181em; }
+  body h2 {
+    font-size: 1.42383em; }
+  body h3 {
+    font-size: 1.26563em; }
+  body h4 {
+    font-size: 1.125em; }
+  body h1.step-up {
+    font-size: 1.80203em; }
+  body h2.step-up {
+    font-size: 1.60181em; }
+  body h3.step-up {
+    font-size: 1.42383em; }
+  body h4.step-up {
+    font-size: 1.26563em; }
+  @media only screen and (min-width: -zf-to-rem(1280, 16px)) {
     body {
-      font-size: 1.125em; } }
+      font-size: 1.125em; }
+      body h1, body h2, body h3, body h4, body h5, body h6, body p, body ul {
+        margin-bottom: 1rem; }
+      body h1, body h2, body h3, body h4 {
+        margin-top: 1.2em;
+        line-height: 1.2; }
+        body h1:first-child, body h2:first-child, body h3:first-child, body h4:first-child {
+          margin-top: 0; }
+      body h1 {
+        margin-top: 0; }
+      body h1 {
+        font-size: 2.0736em; }
+      body h2 {
+        font-size: 1.728em; }
+      body h3 {
+        font-size: 1.44em; }
+      body h4 {
+        font-size: 1.2em; }
+      body h1.step-up {
+        font-size: 2.48832em; }
+      body h2.step-up {
+        font-size: 2.0736em; }
+      body h3.step-up {
+        font-size: 1.728em; }
+      body h4.step-up {
+        font-size: 1.44em; } }
 
 body,
 button,
@@ -4455,7 +4478,7 @@ a {
 =========================================*/
 h1, h2, h3, h4, h5, h6 {
   font-family: "Quicksand", Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 700;
   text-transform: none;
   clear: both; }
 
