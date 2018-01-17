@@ -28,7 +28,6 @@ $golden-ratio:			1.618;
 
 	h1, h2, h3, h4 {
 		margin-top: #{$this_typescale}em;
-		font-weight: inherit;
 		line-height: 1.2;
 
 		&:first-child {
