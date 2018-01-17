@@ -2226,6 +2226,11 @@ Version: 0.1
 		width: em-calc(1280);
 ============================================================*/
 /*============================================================
+	Strip unit
+	Removes the unit (e.g. px, em, rem) from a value, returning the number only.
+	Source: https://github.com/zurb/foundation-sites/releases/tag/v6.4.3
+============================================================*/
+/*============================================================
 	Pixels to rems
 	Source: https://github.com/zurb/foundation-sites/releases/tag/v6.4.3
 	Usage example:
@@ -2480,8 +2485,8 @@ html {
 	GENERAL SETUP
 =========================================*/
 body {
-  min-width: -zf-to-rem(320, 16px);
-  max-width: -zf-to-rem(2250, 16px);
+  min-width: 20rem;
+  max-width: 140.625rem;
   margin: 0 auto; }
 
 [class*="row"] {
@@ -2535,12 +2540,12 @@ body {
   flex: 0 auto;
   padding-left: 0.25rem;
   padding-right: 0.25rem; }
-  @media only screen and (min-width: -zf-to-rem(960, 16px)) {
+  @media only screen and (min-width: 60rem) {
     .column,
     .columns {
       padding-left: 0.5rem;
       padding-right: 0.5rem; } }
-  @media only screen and (min-width: -zf-to-rem(1600, 16px)) {
+  @media only screen and (min-width: 100rem) {
     .column,
     .columns {
       padding-left: 1rem;
@@ -2555,7 +2560,7 @@ body {
 =========================================*/
 /* All Rows */
 [class*="row"] {
-  max-width: -zf-to-rem(1280, 16px);
+  max-width: 80rem;
   margin: 0 auto; }
 
 /* ==== OPTION ONE ==== */
@@ -2621,7 +2626,7 @@ wrapping onto a new line if there's more*/
   flex-basis: 8.33333%;
   max-width: 8.33333%; }
 
-@media only screen and (min-width: -zf-to-rem(600, 16px)) {
+@media only screen and (min-width: 37.5rem) {
   .small-row-of-1 .column {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2671,7 +2676,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 8.33333%;
     max-width: 8.33333%; } }
 
-@media only screen and (min-width: -zf-to-rem(768, 16px)) {
+@media only screen and (min-width: 48rem) {
   .medium-row-of-1 .column {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2721,7 +2726,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 8.33333%;
     max-width: 8.33333%; } }
 
-@media only screen and (min-width: -zf-to-rem(960, 16px)) {
+@media only screen and (min-width: 60rem) {
   .tablet-row-of-1 .column {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2771,7 +2776,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 8.33333%;
     max-width: 8.33333%; } }
 
-@media only screen and (min-width: -zf-to-rem(1280, 16px)) {
+@media only screen and (min-width: 80rem) {
   .large-row-of-1 .column {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2821,7 +2826,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 8.33333%;
     max-width: 8.33333%; } }
 
-@media only screen and (min-width: -zf-to-rem(1600, 16px)) {
+@media only screen and (min-width: 100rem) {
   .xlarge-row-of-1 .column {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2871,7 +2876,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 8.33333%;
     max-width: 8.33333%; } }
 
-@media only screen and (min-width: -zf-to-rem(1920, 16px)) {
+@media only screen and (min-width: 120rem) {
   .xxlarge-row-of-1 .column {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2983,7 +2988,7 @@ wrapping onto a new line if there's more*/
   flex-basis: 100%;
   max-width: 100%; }
 
-@media only screen and (min-width: -zf-to-rem(600, 16px)) {
+@media only screen and (min-width: 37.5rem) {
   .row .columns.small-1 {
     -ms-flex-preferred-size: 8.33333%;
     flex-basis: 8.33333%;
@@ -3033,7 +3038,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 100%;
     max-width: 100%; } }
 
-@media only screen and (min-width: -zf-to-rem(768, 16px)) {
+@media only screen and (min-width: 48rem) {
   .row .columns.medium-1 {
     -ms-flex-preferred-size: 8.33333%;
     flex-basis: 8.33333%;
@@ -3083,7 +3088,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 100%;
     max-width: 100%; } }
 
-@media only screen and (min-width: -zf-to-rem(960, 16px)) {
+@media only screen and (min-width: 60rem) {
   .row .columns.tablet-1 {
     -ms-flex-preferred-size: 8.33333%;
     flex-basis: 8.33333%;
@@ -3133,7 +3138,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 100%;
     max-width: 100%; } }
 
-@media only screen and (min-width: -zf-to-rem(1280, 16px)) {
+@media only screen and (min-width: 80rem) {
   .row .columns.large-1 {
     -ms-flex-preferred-size: 8.33333%;
     flex-basis: 8.33333%;
@@ -3183,7 +3188,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 100%;
     max-width: 100%; } }
 
-@media only screen and (min-width: -zf-to-rem(1600, 16px)) {
+@media only screen and (min-width: 100rem) {
   .row .columns.xlarge-1 {
     -ms-flex-preferred-size: 8.33333%;
     flex-basis: 8.33333%;
@@ -3233,7 +3238,7 @@ wrapping onto a new line if there's more*/
     flex-basis: 100%;
     max-width: 100%; } }
 
-@media only screen and (min-width: -zf-to-rem(1920, 16px)) {
+@media only screen and (min-width: 120rem) {
   .row .columns.xxlarge-1 {
     -ms-flex-preferred-size: 8.33333%;
     flex-basis: 8.33333%;
@@ -3309,7 +3314,7 @@ Can be the messiest depending on how uniform your content is.*/
     clip: auto !important;
     color: #555;
     display: block;
-    font-size: 0.875em;
+    font-size: 0.875rem;
     font-weight: bold;
     height: auto;
     left: 5px;
@@ -4387,7 +4392,7 @@ body, html {
   height: 100%; }
 
 body {
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 1.45; }
   body h1, body h2, body h3, body h4 {
     margin-top: 1.2em; }
@@ -4411,9 +4416,9 @@ body {
     font-size: 1.728em; }
   body h4.step-up {
     font-size: 1.44em; }
-  @media only screen and (min-width: -zf-to-rem(1280, 16px)) {
+  @media only screen and (min-width: 80rem) {
     body {
-      font-size: 1.125em; } }
+      font-size: 1.125rem; } }
 
 body,
 button,
@@ -4516,7 +4521,7 @@ mark, ins {
   text-decoration: none; }
 
 small {
-  font-size: 0.875em; }
+  font-size: 0.875rem; }
 
 big {
   font-size: 125%; }
