@@ -18,17 +18,12 @@ $augmented-fourth:		1.414;
 $perfect-fifth:			1.500;
 $golden-ratio:			1.618;
 
-// Mixin
+// Mixin to apply typescale
 @mixin typescale($this_typescale) {
 
 	// Set basics
-	h1, h2, h3, h4, h5, h6, p, ul {
-		margin-bottom: $global-margin;
-	}
-
 	h1, h2, h3, h4 {
 		margin-top: #{$this_typescale}em;
-		line-height: 1.2;
 
 		&:first-child {
 			margin-top: 0;
@@ -69,5 +64,4 @@ $golden-ratio:			1.618;
 			font-size: #{$normal_size*$this_typescale}em;
 		}
 	}
-
 }

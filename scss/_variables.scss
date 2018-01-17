@@ -45,9 +45,9 @@ $grid-column-gutter: (
 );
 
 // Boundaries
-$start: 				em-calc(320);
-$boundary: 				em-calc(2250);
-$row-width: 			em-calc(1280); 	/* The maximum width of each row. Note that $font-size-large-screen makes 
+$start: 				rem-calc(320);
+$boundary: 				rem-calc(2250);
+$row-width: 			rem-calc(1280); 	/* The maximum width of each row. Note that $font-size-large-screen makes
 										this bigger than 1280 if that value is larger than 16px.
 										$row-width may be different to $boundary, which is for the whole site.
 										If you want to use the xlarge and xxlarge breakpoints for the layout,
@@ -61,9 +61,9 @@ $heading-font: 				"Quicksand", Arial, sans-serif;
 $heading-text-transform:	none;
 $subheading-font:			$heading-font;
 $body-font: 				"Source Serif Pro", Georgia, serif;
-$font-size-normal:			em-calc(16);
-$font-size-large-screen: 	em-calc(18);
-$font-size-small:			em-calc(14);
+$font-size-normal:			rem-calc(16);
+$font-size-large-screen: 	rem-calc(18);
+$font-size-small:			rem-calc(14);
 $font-weight-light:			300;
 $font-weight-normal:		400;
 $font-weight-bold:			700;

@@ -2243,7 +2243,7 @@ Version: 0.1
 /*=========================================
 	GRID
 =========================================*/
-/* The maximum width of each row. Note that $font-size-large-screen makes 
+/* The maximum width of each row. Note that $font-size-large-screen makes
 										this bigger than 1280 if that value is larger than 16px.
 										$row-width may be different to $boundary, which is for the whole site.
 										If you want to use the xlarge and xxlarge breakpoints for the layout,
@@ -2480,8 +2480,8 @@ html {
 	GENERAL SETUP
 =========================================*/
 body {
-  min-width: 20em;
-  max-width: 140.625em;
+  min-width: -zf-to-rem(320, 16px);
+  max-width: -zf-to-rem(2250, 16px);
   margin: 0 auto; }
 
 [class*="row"] {
@@ -2555,7 +2555,7 @@ body {
 =========================================*/
 /* All Rows */
 [class*="row"] {
-  max-width: 80em;
+  max-width: -zf-to-rem(1280, 16px);
   margin: 0 auto; }
 
 /* ==== OPTION ONE ==== */
@@ -4389,59 +4389,31 @@ body, html {
 body {
   font-size: 1em;
   line-height: 1.45; }
-  body h1, body h2, body h3, body h4, body h5, body h6, body p, body ul {
-    margin-bottom: 1rem; }
   body h1, body h2, body h3, body h4 {
-    margin-top: 1.125em;
-    line-height: 1.2; }
+    margin-top: 1.2em; }
     body h1:first-child, body h2:first-child, body h3:first-child, body h4:first-child {
       margin-top: 0; }
   body h1 {
     margin-top: 0; }
   body h1 {
-    font-size: 1.60181em; }
+    font-size: 2.0736em; }
   body h2 {
-    font-size: 1.42383em; }
+    font-size: 1.728em; }
   body h3 {
-    font-size: 1.26563em; }
+    font-size: 1.44em; }
   body h4 {
-    font-size: 1.125em; }
-  body h1.step-up {
-    font-size: 1.80203em; }
+    font-size: 1.2em; }
+  body h1.step-up, body h1 {
+    font-size: 2.48832em; }
   body h2.step-up {
-    font-size: 1.60181em; }
+    font-size: 2.0736em; }
   body h3.step-up {
-    font-size: 1.42383em; }
+    font-size: 1.728em; }
   body h4.step-up {
-    font-size: 1.26563em; }
+    font-size: 1.44em; }
   @media only screen and (min-width: -zf-to-rem(1280, 16px)) {
     body {
-      font-size: 1.125em; }
-      body h1, body h2, body h3, body h4, body h5, body h6, body p, body ul {
-        margin-bottom: 1rem; }
-      body h1, body h2, body h3, body h4 {
-        margin-top: 1.2em;
-        line-height: 1.2; }
-        body h1:first-child, body h2:first-child, body h3:first-child, body h4:first-child {
-          margin-top: 0; }
-      body h1 {
-        margin-top: 0; }
-      body h1 {
-        font-size: 2.0736em; }
-      body h2 {
-        font-size: 1.728em; }
-      body h3 {
-        font-size: 1.44em; }
-      body h4 {
-        font-size: 1.2em; }
-      body h1.step-up {
-        font-size: 2.48832em; }
-      body h2.step-up {
-        font-size: 2.0736em; }
-      body h3.step-up {
-        font-size: 1.728em; }
-      body h4.step-up {
-        font-size: 1.44em; } }
+      font-size: 1.125em; } }
 
 body,
 button,
@@ -4479,7 +4451,9 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Quicksand", Arial, sans-serif;
   font-weight: 700;
+  line-height: 1.2;
   text-transform: none;
+  margin-bottom: 1rem;
   clear: both; }
 
 /*=========================================
