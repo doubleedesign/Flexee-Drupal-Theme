@@ -1,17 +1,16 @@
 /*=========================================
 	GENERAL
 =========================================*/
-@include typescale($major-third);
-
 body, html {
 	height: 100%;
 }
 
-body { 
+body {
+	@include typescale($minor-third);
 	font-size: $font-size-normal;
 	line-height: $line-height-normal;
 	
-	@include bp-xlarge {
+	@include bp-large {
 		font-size: $font-size-large-screen;
 	}
 }
@@ -60,8 +59,15 @@ a {
 h1, h2, h3, h4, h5, h6 {
 	font-family:$heading-font;
 	font-weight:$heading-font-weight;
+	line-height: 1.2;
 	text-transform:$heading-text-transform;
+	margin-bottom: $global-margin;
 	clear: both;
+
+}
+
+h1 {
+	@extend .step-up;
 }
 
 /*=========================================
