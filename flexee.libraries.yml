@@ -5,6 +5,6 @@ global:
       css/style.css: {}
   js:
     js/theme.js: {}
-    dependencies:
-      - core/drupal
-      - core/jquery
+  dependencies:
+    - core/drupal
+    - core/jquery
