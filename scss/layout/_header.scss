@@ -5,9 +5,54 @@
 		font-family: $heading-font;
 	}
 
+	ul.menu {
+		margin: 0;
+
+		li {
+			display: inline-block;
+			padding-top: 0;
+		}
+	}
+
 }
 
-#masthead  {
+#masthead {
 	padding-top: $gutter;
 	padding-bottom: $gutter;
+
+	nav {
+		height: 100%;
+		display: none;
+
+		@include bp-tablet {
+			display: block;
+		}
+	}
+
+	ul.menu {
+		@include row(nowrap);
+		align-items: center;
+		align-content: center;
+		justify-content: flex-end;
+		height: 100%;
+		margin: 0;
+
+		li {
+			list-style: none;
+			font-family: $heading-font;
+
+			a {
+				padding: $global-padding;
+				border: 0;
+
+				&:hover,
+				&:focus,
+				&:active,
+				&.is-active {
+					background: $primary-color;
+					color: $white;
+				}
+			}
+		}
+	}
 }
