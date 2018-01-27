@@ -358,6 +358,14 @@ Can be the messiest depending on how uniform your content is.*/
 	TODO: Simplify this into columns($number)
 =========================================*/
 
+@mixin row($wrap) {
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: $wrap;
+}
+
 @mixin one-column 		{ flex-basis: $columns-1; max-width: $columns-1; }
 @mixin two-columns 		{ flex-basis: $columns-2; max-width: $columns-2; }
 @mixin three-columns 	{ flex-basis: $columns-3; max-width: $columns-3; }
