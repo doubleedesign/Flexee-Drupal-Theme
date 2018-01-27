@@ -5,12 +5,7 @@ Author URI: http://www.doubleedesign.com.au
 Description: Drupal 8 starter theme with a simple flexbox-based grid system and starter styles
 Version: 0.1
 
-I have tried to (mostly) follow the SMACSS method of organising CSS:
-    Base — CSS reset/normalize plus HTML element styling.
-    Layout — macro arrangement of a web page, including any grid systems.
-    Component — discrete, reusable UI elements.
-    State — styles that deal with client-side changes to components.
-    Theme — purely visual styling (“look-and-feel”) for a component.
+I have tried to (mostly) follow the SMACSS method of organising CSS, as is the Drupal Guideline.
 https://www.drupal.org/docs/develop/standards/css/css-file-organization-for-drupal-8
 
 /*=======================================================
@@ -20,8 +15,8 @@ https://www.drupal.org/docs/develop/standards/css/css-file-organization-for-drup
 /* Font imports */
 //@import url('//fonts.googleapis.com/css?family=Quicksand:400,700|Source+Serif+Pro:400,700');
 
-/* FontAwesome icons */
-//@import "base/vendor/font-awesome";
+// FontAwesome icons
+@import "base/vendor/font-awesome";
 
 // Functions
 @import "base/core/functions";
@@ -38,7 +33,7 @@ https://www.drupal.org/docs/develop/standards/css/css-file-organization-for-drup
 @import "base/vendor/animate/animate";
 @import "base/vendor/hover/hover";
 
-/* Typography */
+// Typography
 @import "base/typography/typescales";
 @import "base/typography/typography";
 
@@ -55,6 +50,9 @@ https://www.drupal.org/docs/develop/standards/css/css-file-organization-for-drup
 @import "layout/navigation";
 @import "layout/sidebar";
 @import "layout/footer";
+
+// Blocks
+@import "layout/blocks/search-block";
 
 // Templates
 @import "layout/templates/page";
