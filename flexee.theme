@@ -1,0 +1,46 @@
+<?php
+function flexee_preprocess_block(&$variables, $hook) {
+
+	$block_id = $variables['plugin_id'];
+
+	$region_name = $variables['block']->region;
+
+	// Add column layout classes to blocks
+	switch($block_id) {
+		case 'system_menu_block:account':
+			$layout_class = 'columns';
+			break;
+		case 'search_form_block':
+			$layout_class = 'columns';
+			break;
+		case 'system_branding_block':
+			$layout_class = '';
+			break;
+		case 'system_menu_block':
+			$layout_class = '';
+			break;
+		case 'system_breadcrumb_block':
+			$layout_class = 'start-12 columns';
+			break;
+		case 'page_title_block':
+			$layout_class = '';
+			break;
+		case 'system_main_block':
+			$layout_class = '';
+			break;
+		case 'system_menu_block:footer':
+			$layout_class = 'start-12 large-6 columns';
+			break;
+		default:
+			$layout_class = 'columns';
+	}
+
+	// TODO: Add layout classes to blocks in the footer region according to the number of blocks
+
+	// For development
+	$variables['attributes']['class'] = 'block-id-'.$block_id . ' ' . $layout_class;
+
+	// For live
+	//$variables['attributes']['class'] = $layout_class;
+}
+?>
