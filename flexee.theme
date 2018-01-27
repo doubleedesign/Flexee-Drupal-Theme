@@ -16,8 +16,8 @@ function flexee_preprocess_block(&$variables, $hook) {
 		case 'system_branding_block':
 			$layout_class = '';
 			break;
-		case 'system_menu_block':
-			$layout_class = '';
+		case 'system_menu_block:main':
+			$layout_class = 'nogutter';
 			break;
 		case 'system_breadcrumb_block':
 			$layout_class = 'start-12 columns';
