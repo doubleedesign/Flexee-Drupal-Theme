@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display the breadcrumbs region.
+ * Theme override to display a region.
  *
  * Available variables:
  * - content: The content for this region, typically blocks.
@@ -16,13 +16,11 @@
   set classes = [
     'region',
     'region-' ~ region|clean_class,
+	'start-12 large-4 columns',
   ]
 %}
 {% if content %}
-  <section id="breadcrumbs "{{ attributes.addClass(classes) }}>
-	  <div class="row">
-		  {# TODO: How to apply column classes to the blocks - preprocess function? #}
-		  {{ content }}
-	  </div>
-  </section>
+  <div{{ attributes.addClass(classes) }}>
+    {{ content }}
+  </div>
 {% endif %}

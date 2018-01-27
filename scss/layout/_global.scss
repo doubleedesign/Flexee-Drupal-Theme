@@ -1,0 +1,15 @@
+#content {
+	@include grid-gutter-padding-top-bottom;
+}
+
+section,
+#masthead,
+#page-footer {
+	@include grid-gutter-padding-top-bottom;
+}
+
+#topbar,
+#subfooter {
+	padding-top: $gutter;
+	padding-bottom: $gutter;
+}

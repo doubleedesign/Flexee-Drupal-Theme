@@ -4,36 +4,67 @@ Author: Leesa Ward
 Author URI: http://www.doubleedesign.com.au
 Description: Drupal 8 starter theme with a simple flexbox-based grid system and starter styles
 Version: 0.1
-*/
 
+I have tried to (mostly) follow the SMACSS method of organising CSS:
+    Base — CSS reset/normalize plus HTML element styling.
+    Layout — macro arrangement of a web page, including any grid systems.
+    Component — discrete, reusable UI elements.
+    State — styles that deal with client-side changes to components.
+    Theme — purely visual styling (“look-and-feel”) for a component.
+https://www.drupal.org/docs/develop/standards/css/css-file-organization-for-drupal-8
+
+/*=======================================================
+	BASE
+	CSS reset/normalize plus HTML element styling.
+=======================================================*/
 /* Font imports */
-@import url('//fonts.googleapis.com/css?family=Quicksand:400,700|Source+Serif+Pro:400,700');
+//@import url('//fonts.googleapis.com/css?family=Quicksand:400,700|Source+Serif+Pro:400,700');
 
 /* FontAwesome icons */
-@import "vendor/font-awesome";
+//@import "base/vendor/font-awesome";
 
-/* Functions */
-@import "core/functions";
+// Functions
+@import "base/core/functions";
 
-/* Site variables */
+// Site variables
 @import "variables";
 
-/* Core: Things that generally don't change */
-@import "core/mixins";
-@import "core/normalize"; 
-@import "core/grid";
-@import "core/accessibility"; 
-@import "core/utilities"; 
+// Core: Things that generally don't change (though they may get added to, e.g. site-specific mixins)
+@import "base/core/mixins";
+@import "base/core/normalize";
+@import "base/core/accessibility";
 
 // Third-party libraries 
-@import "vendor/animate/animate";
-@import "vendor/hover/hover";
+@import "base/vendor/animate/animate";
+@import "base/vendor/hover/hover";
 
 /* Typography */
-@import "typography/typescales";
-@import "typography/typography";
+@import "base/typography/typescales";
+@import "base/typography/typography";
 
-/* Standard components */
+/*=======================================================
+	LAYOUT
+	Macro arrangement of a web page, including any grid systems.
+=======================================================*/
+// Grid system
+@import "layout/grid";
+
+// Main layout sections
+@import "layout/global";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/sidebar";
+@import "layout/footer";
+
+// Templates
+@import "layout/templates/page";
+@import "layout/templates/homepage";
+
+/*=======================================================
+	COMPONENT
+	Discrete, reusable UI elements.
+=======================================================*/
+@import "components/breadcrumbs";
 @import "components/asides";
 @import "components/buttons";
 @import "components/forms";
@@ -42,13 +73,15 @@ Version: 0.1
 @import "components/pagination";
 @import "components/tables";
 
-/* Main layout sections */
-@import "layout/global";
-@import "layout/header";
-@import "layout/navigation";
-@import "layout/sidebar";
-@import "layout/footer";
+/*=======================================================
+	STATE
+	Styles that deal with client-side changes to components.
+=======================================================*/
 
-/* Templates */
-@import "templates/page";
-@import "templates/homepage";
+// Nothing here yet.
+
+/*=======================================================
+	THEME
+	Purely visual styling (“look-and-feel”) for a component.
+=======================================================*/
+@import "theme/colour-schemes";

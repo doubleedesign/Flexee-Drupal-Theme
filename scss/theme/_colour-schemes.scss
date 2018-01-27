@@ -1,0 +1,21 @@
+.dark-section {
+	background: $dark-grey;
+
+	* {
+		color: rgba($white,0.6);
+	}
+
+	a {
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $white;
+			border-color: $white;
+		}
+
+		&:focus {
+			border: 1px dotted $white;
+		}
+	}
+}

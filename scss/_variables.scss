@@ -14,6 +14,12 @@ $error-color: 			#ec5840;
 $link-color:			darken($body-color, 10%);
 $link-hover-color:		$primary-color;
 
+$white:					#EFEFEF;
+$black:					#010101;
+$light-grey:			#e3e3e3;
+$medium-grey: 			#848484;
+$dark-grey: 			#2e2e2e;
+
 /*=========================================
 	GRID
 =========================================*/
@@ -21,6 +27,7 @@ $gutter:     			1rem;
 $column-count: 			12;
 
 // Breakpoints
+$default:				0;
 $smaller: 				rem-calc(480);
 $small:       			rem-calc(600);
 $medium: 				rem-calc(768);
@@ -28,6 +35,17 @@ $tablet:        		rem-calc(960);
 $large:        			rem-calc(1280);
 $xlarge: 				rem-calc(1600);
 $xxlarge: 				rem-calc(1920);
+
+$breakpoint-map: (
+	default: 			$default,
+	smaller: 			$smaller,
+	small: 				$small,
+	medium: 			$medium,
+	tablet: 			$tablet,
+	large: 				$large,
+	xlarge: 			$xlarge,
+	xxlarge:			$xxlarge
+);
 
 // Spacing
 $global-padding: 		$gutter;

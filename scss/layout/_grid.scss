@@ -63,24 +63,21 @@ body {
 	&.justify-edges {
 		justify-content: space-between;
 	}
+
+	// TODO: Nesting behaviour
 }
 
 .column,
 .columns {
-  box-sizing: border-box;
-  flex: 0 auto;
-  padding-left: $gutter/4;
-  padding-right: $gutter/4;
-   
-   @include bp-tablet {
-	   padding-left: $gutter/2;
-  	   padding-right: $gutter/2;
-   }
-   
-   @include bp-xlarge {
-	   padding-left: $gutter;
-  	   padding-right: $gutter;
-   }
+	box-sizing: border-box;
+	flex: 0 auto;
+
+	@each $breakpoint, $gutter-value in $grid-column-gutter {
+		@media only screen and (min-width: map-get($breakpoint-map, $breakpoint)) {
+			padding-left: map-get($grid-column-gutter, $breakpoint);
+			padding-right: map-get($grid-column-gutter, $breakpoint);
+		}
+	}
 }
 
 @mixin grid-gutter-collapse { // Removes the padding from columns

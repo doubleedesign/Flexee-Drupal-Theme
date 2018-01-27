@@ -1,0 +1,11 @@
+#page-footer {
+	background: $dark-grey;
+
+	ul.menu {
+		margin: 0;
+	}
+}
+
+#subfooter {
+	background: darken($dark-grey,5%);
+}

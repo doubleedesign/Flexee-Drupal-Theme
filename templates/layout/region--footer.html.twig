@@ -16,12 +16,20 @@
   set classes = [
     'region',
     'region-' ~ region|clean_class,
+	'dark-section',
   ]
 %}
 {% if content %}
-  <footer id="page-footer" role="contentinfo" {{ attributes.addClass(classes) }}>
+	<footer id="page-footer" role="contentinfo" {{ attributes.addClass(classes) }}>
 	  <div class="row">
 		  {{ content }}
 	  </div>
-  </footer>
+	</footer>
+	<div id="subfooter" class="dark-section">
+		<div class="row justify-right">
+			<div class="columns">
+				<small>Website by <a href="https://www.doubleedesign.com.au">Double-E Design</a>.</small>
+			</div>
+		</div>
+	</div>
 {% endif %}

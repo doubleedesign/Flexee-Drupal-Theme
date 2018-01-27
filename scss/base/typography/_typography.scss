@@ -38,11 +38,14 @@ hr {
 a {
 	color: $link-color;
 	transition: all $transition;
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
 
 	&:hover,
 	&:focus,
 	&:active {
 		color: $link-hover-color;
+		border-color: $accent-color;
 	}
 	&:focus {
 		outline: thin dotted;

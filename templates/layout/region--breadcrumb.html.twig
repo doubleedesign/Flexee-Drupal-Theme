@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display the highlighted region.
+ * Theme override to display the breadcrumbs region.
  *
  * Available variables:
  * - content: The content for this region, typically blocks.
@@ -19,7 +19,9 @@
   ]
 %}
 {% if content %}
-  <div{{ attributes.addClass(classes) }}>
-    {{ content }}
-  </div>
+  <section id="breadcrumbs" {{ attributes.addClass(classes) }}>
+	  <div class="row justify-right">
+		  {{ content }}
+	  </div>
+  </section>
 {% endif %}

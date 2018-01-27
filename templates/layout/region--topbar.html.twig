@@ -16,11 +16,12 @@
   set classes = [
     'region',
     'region-' ~ region|clean_class,
+	'dark-section',
   ]
 %}
 {% if content %}
   <div id="topbar" {{ attributes.addClass(classes) }}>
-	  <div class="row">
+	  <div class="row justify-right">
 		  {{ content }}
 	  </div>
   </div>
